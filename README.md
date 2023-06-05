@@ -49,7 +49,7 @@ Assurez-vous d'avoir Docker et Docker Compose installés sur votre machine en su
 #### Étape 2 : Création du fichier docker-compose.yml
 Créez un fichier nommé "docker-compose.yml" et ajoutez le contenu suivant :
 
-`‌`‌`yml
+```
 version: "3"
 
 services:
@@ -87,7 +87,7 @@ services:
       - "traefik.http.routers.whoami.rule=Host(`whoami.example.com`)"
       - "traefik.http.routers.whoami.entrypoints=web"
       - "traefik.http.routers.whoami.service=whoami@docker"
-`‌`‌`
+```
 
 Dans ce fichier de configuration, nous définissons un service Traefik en utilisant l'image "traefik:v2.5". Nous exposons les ports 80 et 8080 pour le trafic HTTP et pour accéder à l'interface Web de Traefik. Le volume "/var/run/docker.sock" est monté pour permettre à Traefik de découvrir les services Docker. Les services "webserver" utilisant l'image Nginx et "whoami" utilisant l'image "containous/whoami" sont également définis avec leurs labels correspondants pour le routage avec Traefik.
 
@@ -96,7 +96,9 @@ Nous avons ajouté les paramètres supplémentaires pour les conteneurs "webserv
 #### Étape 3 : Démarrage du service
 Pour démarrer les services, exécutez la commande suivante :
 
+```
 docker-compose up -d
+```
 
 Cela va démarrer Traefik, les services "webserver" et "whoami", ainsi que le tableau de bord de Traefik.
 
