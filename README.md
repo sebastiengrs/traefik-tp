@@ -1,5 +1,7 @@
 # Mise en place d'un reverse-proxy Traefik
 
+![Logo Traefik](images/logo/docker-traefik.png)
+
 ## Introduction :
 
 Dans le monde de l'ingénierie DevOps, la mise en place d'une infrastructure fiable et efficace est essentielle pour le déploiement et la gestion des services. L'utilisation d'un reverse-proxy peut grandement faciliter ces tâches en offrant des fonctionnalités telles que le routage, l'équilibrage de charge et la sécurité des applications. Dans cet article, nous explorerons Traefik, un reverse-proxy spécialement conçu pour fonctionner dans un environnement Docker. Nous découvrirons comment Traefik simplifie le déploiement, la gestion et la sécurisation des services, tout en offrant une flexibilité et une évolutivité accrues.
@@ -25,25 +27,25 @@ Pour surveiller les performances du reverse-proxy et des services déployés, Tr
 
 ## Architecture :
 
-![Architecture Overview](images/architecture-overview.png)
+![Architecture Overview](images/schemas/architecture-overview.png)
 
 La configuration de Traefik repose sur trois éléments clés : les entrypoints, les routers et les services. Comprendre ces concepts est essentiel pour tirer pleinement parti des fonctionnalités de Traefik.
 
 #### EntryPoints :
 
-![EntryPoints Traefik Schema](images/entrypoints.png)
+![EntryPoints Traefik Schema](images/schemas/entrypoints.png)
 
 Un entrypoint est un point d'entrée pour le trafic dans Traefik. Il définit le protocole et le port d'écoute pour le reverse-proxy. Par exemple, vous pouvez configurer un entrypoint pour le trafic HTTP sur le port 80 et un autre entrypoint pour le trafic HTTPS sur le port 443. Les entrypoints permettent à Traefik de gérer les requêtes entrantes et de les acheminer vers les services appropriés en fonction des règles de routage.
 
 #### Routers :
 
-![Routers Traefik Schema](images/routers.png)
+![Routers Traefik Schema](images/schemas/routers.png)
 
 Les routers définissent les règles de routage pour diriger les requêtes vers les services appropriés. Un router associe un entrypoint à un ou plusieurs services en fonction de critères spécifiques tels que l'hôte, le chemin, les en-têtes HTTP, etc. Par exemple, vous pouvez configurer un router pour rediriger toutes les requêtes entrantes avec un certain hôte ("example.com") vers un service spécifique. Les routers offrent une flexibilité et une granularité dans la définition des règles de routage pour répondre aux besoins spécifiques de votre infrastructure.
 
 #### Services :
 
-![Services Traefik Schema](images/services.png)
+![Services Traefik Schema](images/schemas/services.png)
 
 Un service représente l'application ou le service que vous souhaitez exposer via Traefik. Il peut s'agir d'un conteneur Docker, d'un service Kubernetes ou d'une autre entité. Traefik utilise les services pour acheminer le trafic vers les instances appropriées. Chaque service peut être associé à un ou plusieurs routers, ce qui permet de gérer différentes routes pour un même service en fonction de critères spécifiques.
 
