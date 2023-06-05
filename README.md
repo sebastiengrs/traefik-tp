@@ -56,10 +56,10 @@ L'architecture globale de Traefik repose sur cette combinaison d'entrypoints, de
 
 ## Partie TP
 
-Dans cette partie pratique, nous allons configurer un reverse-proxy Traefik dans un environnement Docker en utilisant Docker Compose. Suivez les étapes ci-dessous pour mettre en place l'environnement, configurer Traefik et afficher le tableau de bord Traefik :
+Dans cette partie pratique, nous allons configurer un reverse-proxy Traefik dans un environnement Docker en utilisant une configuration docker-compose. Suivez les étapes ci-dessous pour mettre en place l'environnement, configurer Traefik et afficher le tableau de bord Traefik :
 
-#### Étape 1 : Installation de Docker et de Docker Compose
-Assurez-vous d'avoir Docker et Docker Compose installés sur votre machine en suivant les instructions officielles adaptées à votre système d'exploitation. Une fois Docker Compose installé, vous êtes prêt à passer à l'étape suivante.
+#### Étape 1 : Installation de Docker et de docker-compose
+Assurez-vous d'avoir Docker et docker-compose soient installés sur votre machine en suivant les instructions officielles adaptées à votre système d'exploitation. Une fois les deux installés, vous êtes prêt à passer à l'étape suivante.
 
 #### Étape 2 : Création du fichier docker-compose.yml
 Créez un fichier nommé "docker-compose.yml" et ajoutez le contenu suivant :
@@ -124,5 +124,6 @@ Pour tester le service "whoami", accédez à http://whoami.example.com. Vous dev
 
 Pour accéder au tableau de bord de Traefik, ouvrez votre navigateur et accédez à http://traefik.example.com. Vous serez redirigé vers le tableau de bord de Traefik où vous pourrez consulter et gérer la configuration du reverse-proxy.
 
+
 ## Conclusion :
-Félicitations ! Vous avez réussi à configurer un reverse-proxy Traefik en utilisant Docker Compose, à routage les requêtes vers différents services et à afficher le tableau de bord de Traefik. L'utilisation de Traefik avec Docker Compose facilite la mise en place de services et le routage du trafic réseau dans vos applications conteneurisées. Continuez à explorer les fonctionnalités de Traefik pour optimiser et sécuriser vos déploiements.
+Félicitations ! Vous avez réussi à configurer un reverse-proxy Traefik en utilisant une configuration docker-compose, à routage les requêtes vers différents services et à afficher le tableau de bord de Traefik. L'utilisation de Traefik avec Docker Compose facilite la mise en place de services et le routage du trafic réseau dans vos applications conteneurisées. Continuez à explorer les fonctionnalités de Traefik pour optimiser et sécuriser vos déploiements.
