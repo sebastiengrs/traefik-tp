@@ -1,6 +1,8 @@
 # Mise en place d'un reverse-proxy Traefik
 
-![Logo Traefik](images/logo/docker-traefik.png)
+<p align="center">
+  <img src="images/logo/docker-traefik.png" alt="Logo Traefik">
+</p>
 
 ## Introduction :
 
